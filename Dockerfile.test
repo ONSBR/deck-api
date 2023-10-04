@@ -1,0 +1,11 @@
+FROM python:3.11-slim as builder
+
+WORKDIR /src
+COPY dev-requirements.txt .
+RUN pip install -r dev-requirements.txt
+
+COPY app ./app
+COPY tests ./tests
+COPY main.py .
+
+CMD ["pytest", "./tests", "--cov=./app"]

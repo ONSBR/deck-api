@@ -1,0 +1,5 @@
+python-dotenv
+fastapi[all]
+inewave
+pytest
+pytest-cov

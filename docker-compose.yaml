@@ -1,0 +1,12 @@
+version: "3.5"
+
+services:
+  deck-api:
+    tty: true
+    stdin_open: true
+    restart: always
+    build:
+      context: .
+    ports:
+      - 5048:5048
+    env_file: .env

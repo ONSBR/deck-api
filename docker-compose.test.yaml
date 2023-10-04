@@ -1,0 +1,10 @@
+version: "3.5"
+
+services:
+  deck-api-test:
+    tty: true
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    env_file: .env.example
